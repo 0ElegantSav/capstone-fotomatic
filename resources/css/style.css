@@ -36,44 +36,45 @@ html {
 
 /* Header */
 
-header {
+header {/*style top&left bar only*/
   position: fixed;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index:1; /*added to prevent other content from passing over*/
 }
 
-header .content {
+header .content { /*Top bar*/
   display: flex;
   align-items: center;
   padding: 1.875rem;
 }
 
-header .logo {
+header .logo {/*top bar left side wording fotomatic*/
   flex: 1;
 }
 
-header nav ul {
+header nav ul {/*top bar right side under class mobile*/
   display: flex;
 }
 
-nav li {
+nav li {/*top bar individually each styled links w/pad*/
   padding-left: 3.5rem;
 }
 
-nav a {
+nav a {/*top bar individually each border goes all around*/
   vertical-align: bottom;
   line-height: 1.6;
   font-size: 1rem;
   color: #4a4a4a;
 }
 
-header .icon {
+header .icon {/*instagram pic*/
   width: 1rem;
   padding-left: .75rem;
 }
 
-header .mobile {
+header .mobile {/*when in mobile size*/
   display: none;
 }
 
@@ -112,11 +113,16 @@ header .mobile {
 
 /* Sign Up Section */
 
-#sign-up-section {
+#sign-up-section {/*main banner section*/
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  /*ADDED BACKGROUND IMAGE HERE USING BELOW*/
+  background-image: url(../images/banner-landingpage.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #sign-up-cta {
@@ -209,24 +215,30 @@ header .mobile {
 
 /* Features Section */
 
-#features-section {
+#features-section {/*content in middle section container with 2 pictures*/
+  border: 10px solid blue;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 4rem 5%;
   background-color: #f3f3f3;
 }
 
-.feature {
+.feature {/*selects both pictures located in middle*/
+  border: 10px solid green;
   flex: 1;
   padding: 2rem;
-  margin: 0px 1.25rem;
+  /*margin: 0px 1.25rem;*/
+  margin-top:64px;
+  margin-bottom: 46px;
   background-color: white;
 }
 
-.feature .image-container {
+.feature .image-container {/*selects photo images*/
+  border: 10px solid orange;
   width: 90%;
   height: 65%;
   margin: 0 auto;
+  padding:32px 32px 40px 32px;
 }
 
 .feature h2 {
